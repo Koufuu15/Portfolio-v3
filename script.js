@@ -1,28 +1,87 @@
+const langBtn = document.getElementById("l");
+const themeBtn = document.getElementById("theme");
+const menuBtn = document.getElementById("menu");
+const nav = document.getElementById("nav");
+const light = document.getElementById("light");
+
 let ja = false;
 
-l.onclick = () => {
+langBtn.addEventListener("click", () => {
     ja = !ja;
 
-    document.querySelectorAll("[data-en]").forEach(e => {
-        e.textContent = ja ? e.dataset.ja : e.dataset.en;
+    document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = ja ? el.dataset.ja : el.dataset.en;
     });
 
-    l.textContent = ja ? "EN" : "日本語";
+    langBtn.textContent = ja ? "EN" : "🌐";
     document.documentElement.lang = ja ? "ja" : "en";
-};
+});
 
-document.onmousemove = e => {
-    light.style.left = e.clientX + "px";
-    light.style.top = e.clientY + "px";
-};
+// =====================
+// Mouse Light
+// =====================
 
-new IntersectionObserver(es =>
-    es.forEach(x =>
-        x.isIntersecting &&
-        x.target.classList.add("show")
-    )
-).observe(document.querySelector(".fade"));
+document.addEventListener("mousemove", e => {
+    light.style.left = `${e.clientX}px`;
+    light.style.top = `${e.clientY}px`;
+});
 
-theme.onclick = () => {
+// =====================
+// Scroll Animation
+// =====================
+
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+document.querySelectorAll(".fade").forEach(el => {
+    observer.observe(el);
+});
+
+// =====================
+// Theme
+// =====================
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    document.body.classList.toggle("dark", savedTheme === "dark");
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.body.classList.add("dark");
+}
+
+themeBtn.textContent =
+    document.body.classList.contains("dark") ? "☀️" : "🌙";
+
+themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
-};
+
+    const dark = document.body.classList.contains("dark");
+
+    themeBtn.textContent = dark ? "☀️" : "🌙";
+
+    localStorage.setItem("theme", dark ? "dark" : "light");
+});
+
+// =====================
+// Mobile Menu
+// =====================
+
+menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("open");
+});
+
+nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("open");
+    });
+});

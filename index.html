@@ -3,210 +3,507 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Koufuu Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Mouse Light -->
     <div id="light"></div>
 
-    <header>
-        <b>Koufuu</b>
+    <!-- ================= HEADER ================= -->
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#career">Career</a>
-            <a href="#cert">Certificates</a>
-            <a href="#links">Links</a>
+    <header>
+
+        <a href="#" class="logo">
+            Koufuu
+        </a>
+
+        <nav id="nav">
+
+            <a href="#about"
+                data-en="About"
+                data-ja="自己紹介">
+                About
+            </a>
+
+            <a href="#career"
+                data-en="Career"
+                data-ja="経歴">
+                Career
+            </a>
+
+            <a href="#cert"
+                data-en="Certificates"
+                data-ja="資格">
+                Certificates
+            </a>
+
+            <a href="#links"
+                data-en="Links"
+                data-ja="リンク">
+                Links
+            </a>
+
         </nav>
 
-        <button id="l">日本語</button>
+        <div class="actions">
+
+            <button
+                id="l"
+                class="lang-btn"
+                title="Language">
+                JA
+            </button>
+
+            <button
+                id="theme"
+                class="theme-btn"
+                title="Theme">
+                🌙
+            </button>
+
+            <button
+                id="menu"
+                class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
     </header>
 
+    <!-- ================= HERO ================= -->
+
     <section class="hero">
-        <h1 data-en="Koufuu" data-ja="Koufuu">
+
+        <h1
+            data-en="Koufuu"
+            data-ja="Koufuu">
             Koufuu
         </h1>
 
         <p
+            class="hero-text"
             data-en="Cyber Security • CTF • Web Development • Kali Linux Lover"
             data-ja="サイバーセキュリティ・CTF・Web開発・Kali Linux好き">
+
             Cyber Security • CTF • Web Development • Kali Linux Lover
+
         </p>
 
         <div class="cards">
 
-            <div class="card">
-                📍
+            <div class="card fade">
+                <i class="fa-solid fa-location-dot"></i>
+
                 <span
                     data-en="Hokkaido, Japan"
                     data-ja="北海道・日本">
+
                     Hokkaido, Japan
+
                 </span>
             </div>
 
-            <div class="card">
-                🛡 SecHack365 '26
+            <div class="card fade">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span
+                    data-en="SecHack365 '26 Trainee"
+                    data-ja="SecHack365 '26 トレーニー">
+
+                    SecHack365 '26 Trainee
+
+                </span>
             </div>
 
-            <div class="card">
-                🐺 TeamHowls Founder
+            <div class="card fade">
+                <i class="fa-solid fa-users"></i>
+                <span
+                    data-en="TeamHowls Founder"
+                    data-ja="学生団体TeamHowls 代表">
+
+                    TeamHowls Founder
+
+                </span>
             </div>
 
-            <div class="card">
-                ✈ Tobitate! JAPAN
+            <div class="card fade">
+                <i class="fa-solid fa-plane"></i>
+                <span
+                    data-en="TeamHowls Founder"
+                    data-ja="トビタテ！留学 JAPAN 11期生 STEAM探求コース">
+
+                    TeamHowls Founder
+
+                </span>
             </div>
 
         </div>
+
     </section>
 
-    <section id="about">
-        <h2 data-en="About" data-ja="自己紹介">
+    <!-- ================= ABOUT ================= -->
+
+    <section
+        id="about"
+        class="fade">
+
+        <h2
+            data-en="About"
+            data-ja="自己紹介">
+
             About
+
         </h2>
 
         <p
-            data-en="I enjoy cybersecurity, CTFs, web development and low-level programming."
-            data-ja="サイバーセキュリティ、CTF、Web開発、低レイヤ技術に取り組んでいます。">
+            data-en="I enjoy cybersecurity, CTFs, web development and low-level programming. I like building useful tools, researching security education, and creating things that help people."
+
+            data-ja="サイバーセキュリティ、CTF、Web開発、低レイヤ技術を中心に活動しています。便利なツールや教育につながるサービスを開発することが好きです。">
+
             I enjoy cybersecurity...
+
         </p>
+
     </section>
+
+    <!-- ================= CAREER ================= -->
 
     <section
         id="career"
         class="fade">
 
-        <h2 data-en="Career" data-ja="経歴">
+        <h2
+            data-en="Career"
+            data-ja="経歴">
+
             Career
+
         </h2>
 
         <div class="timeline">
 
             <div class="year">
-                <b>2023</b>
+
+                <div class="year-title">
+                    2023
+                </div>
+
                 <ul>
-                    <li>Hokkaido Programming Contest (2nd Place)</li>
+
+                    <li>
+                        Hokkaido Programming Contest (2nd Place)
+                    </li>
+
                 </ul>
+
             </div>
 
             <div class="year">
-                <b>2025</b>
+
+                <div class="year-title">
+                    2025
+                </div>
+
                 <ul>
+
                     <li>Fuji Seminar 7th</li>
+
                     <li>Web Development Internship</li>
+
                     <li>Security Camp Mini</li>
+
                 </ul>
+
             </div>
 
             <div class="year">
-                <b>2026</b>
+
+                <div class="year-title">
+                    2026
+                </div>
+
                 <ul>
+
                     <li
-                      data-en="Founder, TeamHowls"
-                      data-ja="学生団体TeamHowls 設立者">
+                        data-en="Founder, TeamHowls"
+                        data-ja="学生団体 TeamHowls 設立">
+
+                        Founder, TeamHowls
+
                     </li>
+
                     <li
-                      data-en="SecHack365 '26 Trainee"
-                      data-ja="SecHack365 '26 トレーニー">
+                        data-en="SecHack365 '26 Trainee"
+                        data-ja="SecHack365 '26 トレーニー">
+
+                        SecHack365 '26 Trainee
+
                     </li>
+
                     <li
-                      data-en="Tobitate! JAPAN STEAM"
-                      data-ja="トビタテ！留学JAPAN 11期生 STEAM探求コース">
+                        data-en="Tobitate! JAPAN STEAM"
+                        data-ja="トビタテ！留学JAPAN 11期生 STEAM探究コース">
+
+                        Tobitate! JAPAN STEAM
+
                     </li>
+
                 </ul>
+
             </div>
 
         </div>
+
     </section>
 
-    <section id="cert">
+    <!-- ================= CERTIFICATES ================= -->
 
-        <h2 data-en="Certificates" data-ja="資格">
+    <section
+        id="cert"
+        class="fade">
+
+        <h2
+            data-en="Certificates"
+            data-ja="資格">
+
             Certificates
+
         </h2>
 
-        <ul>
-            <li
-                data-en="Fundamental IT Engineer"
-                data-ja="基本情報技術者">
-            </li>
+        <div class="cards">
 
-            <li
-                data-en="IELTS 7.0"
-                data-ja="IELTS 7.0">
-            </li>
+            <div class="card">
+                基本情報技術者
+            </div>
 
-            <li
-                data-en="Calligraphy Associate Master"
-                data-ja="書道 準師範">
-            </li>
+            <div class="card">
+                IELTS 7.0
+            </div>
 
-            <li
-                data-en="Math Grade 2"
-                data-ja="数検2級">
-            </li>
+            <div class="card">
+                書道 準師範
+            </div>
 
-            <li
-                data-en="Kanji Grade 2"
-                data-ja="漢検2級">
-            </li>
-        </ul>
+            <div class="card">
+                数検2級
+            </div>
 
-    </section>
+            <div class="card">
+                漢検2級
+            </div>
 
-    <section id="links">
-
-        <h2 data-en="Links" data-ja="リンク">
-            Links
-        </h2>
-
-        <ul>
-            <li>
-                <span
-                    data-en="GitHub"
-                    data-ja="GitHub">
-                    GitHub
-                </span>
-                :
-                https://github.com/Koufuu15
-            </li>
-
-            <li>
-                Zenn:
-                https://zenn.dev/koufu
-            </li>
-
-            <li>
-                Qiita:
-                https://qiita.com/nade_3356
-            </li>
-
-            <li>
-                <span
-                    data-en="LinkedIn / X / Instagram / Facebook / Discord"
-                    data-ja="LinkedIn・X・Instagram・Facebook・Discord">
-                    LinkedIn...
-                </span>
-            </li>
-        </ul>
-
-        <div class="social">
-            <a>🐙 GitHub</a>
-            <a>💻 Qiita</a>
-            <a>📘 Zenn</a>
-            <a>𝕏 X</a>
-            <a>💼 LinkedIn</a>
-            <a>📷 Instagram</a>
         </div>
 
     </section>
 
-    <button id="theme">🌙</button>
+    <!-- ================= LINKS ================= -->
+
+    <section
+        id="links"
+        class="fade">
+
+        <h2
+            data-en="Links"
+            data-ja="リンク">
+
+            Links
+
+        </h2>
+
+        <!-- Articles -->
+
+        <h3
+            data-en="Articles"
+            data-ja="記事">
+
+            Articles
+
+        </h3>
+
+        <div class="link-grid">
+
+            <a
+                href="https://zenn.dev/koufu"
+                target="_blank"
+                class="link-card">
+
+                <i class="fa-solid fa-book-open icon"></i>
+
+                <div>
+
+                    <h4>Zenn</h4>
+
+                    <p>Technical Articles</p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+            </a>
+
+            <a
+                href="https://qiita.com/nade_3356"
+                target="_blank"
+                class="link-card">
+
+                <i class="fa-solid fa-code icon"></i>
+
+                <div>
+
+                    <h4>Qiita</h4>
+
+                    <p>Programming Notes</p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+            </a>
+
+        </div>
+
+        <!-- Contact -->
+
+        <h3
+            data-en="Contact"
+            data-ja="連絡先">
+
+            Contact
+
+        </h3>
+
+        <div class="link-grid">
+
+            <a
+                href="https://github.com/Koufuu15"
+                target="_blank"
+                class="link-card">
+
+                <i class="fa-brands fa-github icon"></i>
+
+                <div>
+
+                    <h4>GitHub</h4>
+
+                    <p>Projects</p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/nadeshiko-sekiguchi-521266411/"
+                target="_blank"
+                class="link-card">
+
+                <i class="fa-brands fa-linkedin icon"></i>
+
+                <div>
+
+                    <h4>LinkedIn</h4>
+
+                    <p>Professional Profile</p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+            </a>
+
+            <a
+                href="https://x.com/Koufuu3356"
+                target="_blank"
+                class="link-card">
+
+                <i class="fa-brands fa-x-twitter icon"></i>
+
+                <div>
+
+                    <h4>X</h4>
+
+                    <p>Latest Updates</p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+            </a>
+
+            <a
+                href="https://www.instagram.com/nade.3356/"
+                target="_blank"
+                class="link-card">
+
+                <i class="fa-brands fa-instagram icon"></i>
+
+                <div>
+
+                    <h4>Instagram</h4>
+
+                    <p>Photos</p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+            </a>
+
+            <a
+                href="https://www.facebook.com/profile.php?id=61577597019120"
+                target="_blank"
+                class="link-card">
+
+                <i class="fa-brands fa-facebook icon"></i>
+
+                <div>
+
+                    <h4>Facebook</h4>
+
+                    <p>Social Profile</p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+            </a>
+
+            <a
+                href="https://discordapp.com/users/1375361574851842169"
+                target="_blank"
+                class="link-card">
+
+                <i class="fa-brands fa-discord icon"></i>
+
+                <div>
+
+                    <h4>Discord</h4>
+
+                    <p>Let's Talk</p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
