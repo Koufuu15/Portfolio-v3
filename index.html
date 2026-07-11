@@ -12,6 +12,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/アイコン_鷹.svg">
 </head>
 
 <body>
@@ -24,7 +25,11 @@
     <header>
 
         <a href="#" class="logo">
-            Koufuu
+            <img
+                src="images/アイコン_鷹.svg"
+                alt="Koufuu Logo">
+
+            <span>Koufuu</span>
         </a>
 
         <nav id="nav">
@@ -85,20 +90,29 @@
 
     <section class="hero">
 
-        <h1
-            data-en="Koufuu"
-            data-ja="Koufuu">
-            Koufuu
-        </h1>
+        <div class="hero-title">
+            <div class="hero-image">
+                <img src="images/アイコン_鷹.svg"
+                    alt="Koufuu">
+            </div>
 
-        <p
-            class="hero-text"
-            data-en="Cyber Security • CTF • Web Development • Kali Linux Lover"
-            data-ja="サイバーセキュリティ・CTF・Web開発・Kali Linux好き">
+            <div class="hero-title-text">
+                <h1
+                    data-en="Koufuu"
+                    data-ja="Koufuu">
+                    Koufuu
+                </h1>
 
-            Cyber Security • CTF • Web Development • Kali Linux Lover
+                <p
+                    class="hero-text"
+                    data-en="Cyber Security • CTF • Web Development • Kali Linux Lover"
+                    data-ja="サイバーセキュリティ・CTF・Web開発・Kali Linux好き">
 
-        </p>
+                    Cyber Security • CTF • Web Development • Kali Linux Lover
+
+                </p>
+            </div>
+        </div>
 
         <div class="cards">
 
@@ -304,7 +318,10 @@
 
         <div class="cards">
 
-            <div class="card">
+            <div class="card"
+                data-en="Fundamental Information Technology Engineer Examination"
+                data-ja="基本情報技術者"
+            >
                 基本情報技術者
             </div>
 
@@ -312,18 +329,20 @@
                 IELTS 7.0
             </div>
 
-            <div class="card">
+            <div class="card"
+                data-en="Japanese Calligraphy Semi-Professional"
+                data-ja="書道 準師範"
+            >
                 書道 準師範
             </div>
 
-            <div class="card">
-                数検2級
+            <div class="card"
+                data-en="Global Mathematics Certification"
+                data-ja="実用数学技能検定２級"
+            >
+                実用数学技能検定２級
             </div>
-
-            <div class="card">
-                漢検2級
-            </div>
-
+            
         </div>
 
     </section>
