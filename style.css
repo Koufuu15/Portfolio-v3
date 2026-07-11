@@ -1,0 +1,138 @@
+
+:root {
+    --a: #0aa;
+    --t: #222;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--t);
+    background: #fff;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("background.png") center/70% no-repeat;
+    opacity: .05;
+    z-index: -1;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: #ffffffdd;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+nav a {
+    margin: 0 8px;
+    color: #555;
+    text-decoration: none;
+}
+
+button {
+    padding: 6px 10px;
+}
+
+section {
+    max-width: 960px;
+    margin: auto;
+    padding: 36px 20px;
+}
+
+.hero {
+    padding: 50px 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.card {
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fff;
+}
+
+h1,
+h2 {
+    margin: .2em 0;
+}
+
+.muted {
+    color: #666;
+}
+
+#light {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle,
+            rgba(0, 180, 255, .18),
+            transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: .7s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: none;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social a {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dark {
+    background: #111;
+    color: #eee;
+}
+
+.dark header {
+    background: #1a1a1add;
+}
+
+.dark .card {
+    background: #1d1d1d;
+    border-color: #333;
+}
+
+.timeline {
+    border-left: 3px solid #0aa;
+    padding-left: 18px;
+}
+
+.timeline .year {
+    margin-bottom: 18px;
+}
+
+.timeline ul {
+    margin: .3em 0;
+}
