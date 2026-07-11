@@ -488,6 +488,27 @@ p {
     background: var(--accent);
 }
 
+/* ================= FOOTER ================= */
+
+footer {
+    margin-top: 50px;
+    padding: 30px 20px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
