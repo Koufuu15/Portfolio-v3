@@ -13,7 +13,7 @@ langBtn.addEventListener("click", () => {
         el.textContent = ja ? el.dataset.ja : el.dataset.en;
     });
 
-    langBtn.textContent = ja ? "EN" : "🌐";
+    langBtn.textContent = ja ? "EN" : "JA";
     document.documentElement.lang = ja ? "ja" : "en";
 });
 
