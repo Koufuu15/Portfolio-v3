@@ -13,6 +13,10 @@ langBtn.addEventListener("click", () => {
         el.textContent = ja ? el.dataset.ja : el.dataset.en;
     });
 
+    document.querySelectorAll("[data-href-ja]").forEach(el => {
+        el.href = ja ? el.dataset.hrefJa : el.dataset.hrefEn;
+    });
+
     langBtn.textContent = ja ? "EN" : "JA";
     document.documentElement.lang = ja ? "ja" : "en";
 });

@@ -318,7 +318,7 @@ p {
     flex-shrink: 0;
 }
 
-.card span {
+.card .card-text {
     font-weight: 500;
 }
 
@@ -333,7 +333,7 @@ p {
     transform: translate(4px, -4px);
 }
 
-.teamhowls-link{
+.url{
   display:flex;
   align-items:center;
   gap:10px;
@@ -342,12 +342,12 @@ p {
   transition:.3s;
 }
 
-.teamhowls-link:hover{
+.url:hover{
   transform:translateY(-3px);
   opacity:.8;
 }
 
-.teamhowls-link img{
+.url img{
   width:40px;
   height:40px;
   object-fit:contain;
@@ -367,7 +367,7 @@ p {
   flex-shrink: 0;
 }
 
-.teamhowls-link:hover span {
+.url:hover span {
   text-decoration: underline;
 }
 
